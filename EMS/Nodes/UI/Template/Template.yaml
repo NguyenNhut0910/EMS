@@ -1,0 +1,9 @@
+Name: Template
+Type: FolderType
+Children:
+- File: Button_Nagivitation/Button_Nagivitation.yaml
+- File: Data_Sensor/Data_Sensor.yaml
+- File: Maintenance/Maintenance.yaml
+- File: Theme/Theme.yaml
+- File: AlarmMessage/AlarmMessage.yaml
+- File: HistorySort/HistorySort.yaml

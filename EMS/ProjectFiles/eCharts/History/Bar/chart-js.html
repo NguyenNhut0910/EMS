@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="./chart.js"></script>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #ffffff;
+        overflow: hidden;
+        height: fit-content;
+      }
+
+      .chart-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        max-width: 1500px;
+        margin: 0 auto;
+      }
+
+      .chart-box {
+        background: #ffffff;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #barChartBox {
+        flex: 2;
+        height: 350px !important;
+      }
+
+      #doughnutChartBox {
+        flex: 1;
+        height: 360px !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="controls"></div>
+    <div
+      id="notice"
+      style="color: #b00020; font-weight: 500; margin-bottom: 10px"
+    ></div>
+    <div class="chart-container">
+      <div class="chart-box" id="barChartBox">
+        <canvas id="barChart" width="700" height="360"></canvas>
+      </div>
+      <div class="chart-box" id="doughnutChartBox">
+        <canvas id="doughnutChart" width="260" height="360"></canvas>
+      </div>
+    </div>
+
+    <script src="./echarts.min.js"></script>
+    <script src="./chart-bar-line.js"></script>
+  </body>
+</html>

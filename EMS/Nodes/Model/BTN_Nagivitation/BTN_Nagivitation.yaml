@@ -1,0 +1,24 @@
+Name: BTN Nagivitation
+Type: FolderType
+Children:
+- Name: Overview
+  Id: g=a5bcf8ba3ec04b0daae1bfcfc3289e75
+  Type: BaseDataVariableType
+  DataType: Int16
+  Value: 1
+- Name: Alarm
+  Id: g=87614da797acbd328a28052f9d1ac04a
+  Type: BaseDataVariableType
+  DataType: Int16
+- Name: History
+  Id: g=122a9351a73827242e5f5061d7dcd1ef
+  Type: BaseDataVariableType
+  DataType: Int16
+- Name: Report
+  Id: g=76913595fea13819a1a13a0ec9c9d447
+  Type: BaseDataVariableType
+  DataType: Int16
+- Name: Setting
+  Id: g=898a24a17fcbddce16c953dd416c000f
+  Type: BaseDataVariableType
+  DataType: Int16

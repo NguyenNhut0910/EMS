@@ -1,0 +1,31 @@
+Name: 'Operator '
+Type: FolderType
+Children:
+- Name: User
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "0"
+- Name: OperatorID
+  Type: BaseDataVariableType
+  DataType: Int16
+- Name: Name
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "0"
+- Name: SessionID
+  Type: BaseDataVariableType
+  DataType: Int32
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../Session/SessionID"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Password
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "0"

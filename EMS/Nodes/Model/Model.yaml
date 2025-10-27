@@ -1,0 +1,33 @@
+Name: Model
+Type: ModelCategoryFolder
+Children:
+- File: BTN_Nagivitation/BTN_Nagivitation.yaml
+- File: Product_Mode/Product_Mode.yaml
+- Name: PowerData
+  Id: g=4043625fdc194a509c90422483250c87
+  Supertype: BaseObjectType
+  Children:
+  - Name: Voltage
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: Current
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: Power
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: Frequency
+    Type: BaseDataVariableType
+    DataType: Double
+- File: PowerInstances/PowerInstances.yaml
+- Name: test
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "0"
+- File: Dashboard/Dashboard.yaml
+- File: Gauge/Gauge.yaml
+- File: DB/DB.yaml
+- File: test_button/test_button.yaml
+- File: No._E&W/No._E&W.yaml
+- File: Button_fill/Button_fill.yaml
+- File: History/History.yaml

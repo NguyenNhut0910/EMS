@@ -1,0 +1,173 @@
+/* --- Layout cơ bản --- */
+html,
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* --- Bảng chính --- */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  font-size: 13px;
+  overflow-x: auto;
+}
+
+/* --- Header và dữ liệu bảng --- */
+table th,
+table td {
+  padding: 8px 12px;
+  border: none;
+  font-size: 13px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+/* --- Cột đầu tiên: width 10% --- */
+table th:first-child,
+table td:first-child {
+  width: 10%;
+  font-weight: bold;
+  color: #2c3e50;
+  font-size: 14px;
+}
+
+/* --- Canh phải các cột thứ 2 và 3 --- */
+th:nth-child(2),
+th:nth-child(3),
+td:nth-child(2),
+td:nth-child(3) {
+  text-align: right;
+}
+
+/* --- Header bảng --- */
+th {
+  background-color: #adeed953;
+}
+
+/* --- Dòng bảng --- */
+table tr {
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+table tr:hover {
+  background: #f5f7fa;
+}
+
+/* --- Tùy chỉnh cột tiêu dùng --- */
+.consumer-cell {
+  font-weight: 500;
+  background: #f8f8f8;
+  border-radius: 8px 0 0 8px;
+}
+
+.consumer-name {
+  color: #2c3e50;
+  font-size: 16px;
+}
+
+/* --- Bar biểu diễn năng lượng --- */
+.energy-cell {
+  min-width: 80px;
+}
+
+.bar-container {
+  display: inline-block;
+  width: 120px;
+  height: 10px;
+  background: #eaeaea;
+  border-radius: 5px;
+  vertical-align: middle;
+  margin-right: 8px;
+  position: relative;
+}
+
+.bar {
+  height: 100%;
+  width: 0;
+  position: absolute;
+  left: 0;
+  border-radius: 5px;
+  opacity: 0.5;
+}
+
+.bar-value {
+  margin-left: 18px;
+  font-size: 14px;
+  display: inline-block;
+  vertical-align: middle;
+  color: #34495e;
+}
+
+/* --- Biểu tượng tăng/giảm --- */
+.bar-icon {
+  margin-left: 8px;
+  font-size: 1rem;
+}
+
+.bar-up {
+  color: red;
+}
+
+.bar-down {
+  color: green;
+}
+
+/* --- Giá trị năng lượng --- */
+.energy-value {
+  font-weight: 500;
+  color: #2c3e50;
+  font-size: 12px;
+}
+
+/* --- Thay đổi so với tuần trước --- */
+.change-cell {
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.change-up {
+  color: #27ae60;
+}
+
+.change-down {
+  color: #e74c3c;
+}
+
+.change-zero {
+  color: #888;
+}
+
+/* --- Phát thải --- */
+.emission-cell {
+  color: #2c3e50;
+  font-size: 12px;
+}
+
+/* --- Tiêu đề hiện tại / trước đó --- */
+#curr-title,
+#prev-title {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* --- Dòng phụ đề ngày --- */
+.date-under {
+  display: block;
+  font-size: 9.5px;
+  color: #888;
+  font-weight: normal;
+  margin-top: 2px;
+}
+
+/* --- Điều chỉnh font trong bảng xếp hạng --- */
+#ranking-body td {
+  font-size: 12px;
+}

@@ -1,0 +1,32 @@
+Name: Product Mode
+Type: FolderType
+Children:
+- Name: Operator
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "0"
+- Name: Product
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "0"
+- Name: Plastic
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "0"
+- Name: Datetime
+  Id: g=1c52ffa1728880875b324a300942293a
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "0"
+- Name: ChangeData
+  Id: g=b07df00d754f6a372121cb2431a20d29
+  Type: BaseDataVariableType
+  DataType: Int32
+- Name: Period
+  Type: BaseDataVariableType
+  DataType: UInt16
+- Name: Status
+  Id: g=48995b46883011ecbed61407a6438b4c
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "0"

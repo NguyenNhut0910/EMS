@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      body {
+        background-color: #1e1e4b;
+        color: white;
+        font-family: sans-serif;
+        padding: 2rem;
+      }
+      canvas {
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Tổng quan thời tiết</h2>
+    <canvas id="weatherChart" height="100"></canvas>
+    <script>
+      const canvas = document.getElementById("weatherChart");
+      const ctx = canvas.getContext("2d");
+
+      const tempData = [27, 29, 31, 33, 33, 32, 31, 29, 29, 28, 27, 27];
+
+      // Tính trung bình nhiệt độ
+      const avgTemp =
+        tempData.reduce((sum, val) => sum + val, 0) / tempData.length;
+      const threshold = avgTemp * 1.03;
+
+      const weatherChart = new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: [
+            "06:00",
+            "Hiện tại",
+            "10:00",
+            "12:00",
+            "14:00",
+            "16:00",
+            "18:00",
+            "20:00",
+            "22:00",
+            "00:00",
+            "02:00",
+            "04:00",
+          ],
+          datasets: [
+            {
+              label: "Nhiệt độ (°C)",
+              data: tempData,
+              borderColor: "transparent",
+              backgroundColor: function (context) {
+                const chart = context.chart;
+                const { ctx, chartArea } = chart;
+
+                if (!chartArea) return null;
+
+                const gradient = ctx.createLinearGradient(
+                  chartArea.left,
+                  0,
+                  chartArea.right,
+                  0
+                );
+                gradient.addColorStop(0, "rgba(255, 255, 102, 0.4)"); // vàng sáng hơn
+                gradient.addColorStop(1, "rgba(255, 102, 102, 0.4)"); // đỏ sáng hơn
+
+                return gradient;
+              },
+              fill: true,
+              yAxisID: "y",
+              tension: 0.4,
+              pointRadius: 0,
+              pointHoverRadius: 5,
+              borderWidth: 0,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          interaction: {
+            mode: "index",
+            intersect: false,
+          },
+          plugins: {
+            legend: {
+              labels: {
+                color: "white",
+              },
+            },
+            tooltip: {
+              enabled: true,
+            },
+          },
+          scales: {
+            x: {
+              ticks: {
+                color: "white",
+              },
+              grid: {
+                color: "rgba(255,255,255,0.1)",
+              },
+            },
+            y: {
+              type: "linear",
+              position: "left",
+              ticks: {
+                color: "white",
+              },
+              grid: {
+                color: "rgba(255,255,255,0.1)",
+              },
+            },
+            y1: {
+              type: "linear",
+              position: "right",
+              ticks: {
+                color: "white",
+              },
+              grid: {
+                drawOnChartArea: false,
+              },
+            },
+          },
+          elements: {
+            point: {
+              hoverRadius: 6,
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

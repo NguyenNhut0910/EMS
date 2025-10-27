@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gauge Realtime 2x2</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background: #f5f7fa;
+        overflow: hidden;
+      }
+
+      .gauge-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        max-width: 600px;
+      }
+
+      .gauge-container {
+        /* background: #2f4566; */
+        margin-bottom: -50px;
+        position: relative;
+        width: 100%;
+        height: 160px;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: center; */
+      }
+
+      .gauge {
+        width: 120px;
+        height: 100px;
+        position: relative;
+      }
+
+      .points {
+        position: absolute;
+      }
+
+      .percent {
+        display: block;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .label {
+        display: block;
+        font-size: 14px;
+        text-align: center;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gauge-grid">
+      <div class="gauge-container">
+        <div class="gauge" id="gauge1"></div>
+        <div id="gauge1-text"></div>
+      </div>
+      <div class="gauge-container">
+        <div class="gauge" id="gauge2"></div>
+        <div id="gauge2-text"></div>
+      </div>
+      <div class="gauge-container">
+        <div class="gauge" id="gauge3"></div>
+        <div id="gauge3-text"></div>
+      </div>
+      <div class="gauge-container">
+        <div class="gauge" id="gauge4"></div>
+        <div id="gauge4-text"></div>
+      </div>
+    </div>
+
+    <!-- MQTT.js -->
+    <script src="paho-mqtt-min.js"></script>
+    <!-- Gauge logic -->
+    <script src="gauge.js"></script>
+  </body>
+</html>

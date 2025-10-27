@@ -1,0 +1,4 @@
+Name: Data Sensor
+Type: FolderType
+Children:
+- File: 'Real-time/Real-time.yaml'

@@ -1,0 +1,9 @@
+Name: DB
+Type: FolderType
+Children:
+- File: Session/Session.yaml
+- File: Machine/Machine.yaml
+- File: Product/Product.yaml
+- File: Operator_/Operator_.yaml
+- File: Area/Area.yaml
+- File: Device/Device.yaml

@@ -1,0 +1,22 @@
+Name: DataRT
+Id: g=2eac4b3f727d6dc2eb75a02d0c863b60
+Type: FolderType
+Children:
+- Name: device
+  Type: BaseDataVariableType
+  DataType: Int16
+- Name: U1
+  Type: BaseDataVariableType
+  DataType: Float
+- Name: I1
+  Type: BaseDataVariableType
+  DataType: Float
+- Name: P_total
+  Type: BaseDataVariableType
+  DataType: Float
+- Name: F
+  Type: BaseDataVariableType
+  DataType: Float
+- Name: timestamp
+  Type: BaseDataVariableType
+  DataType: String

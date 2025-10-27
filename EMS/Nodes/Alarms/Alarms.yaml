@@ -1,0 +1,1025 @@
+Name: Alarms
+Id: g=3293e7cd8de0bb06cc725e017a984470
+Type: AlarmsCategoryFolder
+Children:
+- Name: Voltage Alarm
+  Id: g=1a3e02a7f2308e375a8ba022196f0e28
+  Type: ExclusiveLevelAlarmController
+  Children:
+  - Name: InputValue
+    Id: g=a08cd8eba19f8a945c47114212996916
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=5820ccc3ad7cada7b92dc368dd7f60c8
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../Model/DB/Device/DataRT/U1"
+      Children:
+      - Name: Mode
+        Id: g=dd07ad5bc1adf41acbcdd8a06c5fa00b
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Id: g=2b9c789ad358f07390c033366dcba893
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=21;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=154
+    Direction: Forward
+  - Name: HighLimit
+    Id: g=8497d9a08f595cb4c1aa685e178cb136
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 300.0
+  - Name: LowLimit
+    Id: g=9f93cc2331d55fc3573c60fb23a4414a
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 200.0
+  - Name: Message
+    Id: g=fbd2b322dcc5297e6cf9de578c001c08
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Children:
+    - Name: HighStateMessage
+      Id: g=ef052c724a352bf83698723c0921b01d
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"LocaleId":"en-US","Text":"Voltage High"}
+      Children:
+      - Name: StringFormatter1
+        Id: g=d59766222aee14119d58c62a25686e68
+        Type: StringFormatter
+        Children:
+        - Name: Format
+          Id: g=3ec8337ee94acc65d24a23247a04e306
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ReferenceType: HasParameter
+          Value: {"LocaleId":"en-US","Text":"Voltage {0}'s HIGH"}
+        - Name: ns=3;Source0
+          Id: g=e695e77417c5975dc530da2d56ecabe6
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=b5c3e5ce137a251aa868fcd5636e5e8d
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../../Model/DB/Device/DataRT/device"
+            Children:
+            - Name: IsPull
+              Id: g=fba6aab0e5f230eb3ee8681e2f2c8510
+              Type: BaseVariableType
+              DataType: Boolean
+              Value: true
+        - Name: IsPull
+          Id: g=f010dbee6aee5ca5e349d2651d6ae8ed
+          Type: PropertyType
+          DataType: Boolean
+          ReferenceType: HasComponent
+          Value: true
+    - Name: LowStateMessage
+      Id: g=40a4e2a9e9cd333fba503980f8d5a711
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Children:
+      - Name: StringFormatter1
+        Id: g=dd8a727ed84acb0f3bc6281978748349
+        Type: StringFormatter
+        Children:
+        - Name: Format
+          Id: g=31bf4494b0b007e20fffba13785ec2bf
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ReferenceType: HasParameter
+          Value: {"LocaleId":"en-US","Text":"Voltage {0}'s LOW"}
+        - Name: ns=3;Source0
+          Id: g=ed480465303e4218308b3bd4f4d8aadf
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=b4ce2b59854fd146653b867b86a7cc29
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../../Model/DB/Device/DataRT/device"
+            Children:
+            - Name: IsPull
+              Id: g=89871ef609e5d9fd3156a1c4398f6c50
+              Type: BaseVariableType
+              DataType: Boolean
+              Value: true
+        - Name: IsPull
+          Id: g=11f7ce443ac0e0653521b200b64e412d
+          Type: PropertyType
+          DataType: Boolean
+          ReferenceType: HasComponent
+          Value: true
+  - Name: Severity
+    Id: g=5d9cfcfd6ed8df22501eb3b77afe37fa
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 1
+  - Name: State
+    Id: g=f22ca93f56abedaf5dce413e6e6a6745
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Children:
+    - Name: KeyValueConverter1
+      Id: g=8f62c1f4b7f0ca33909c3dfde1e28d37
+      Type: ValueMapConverter
+      Children:
+      - Name: Source
+        Id: g=a78d4beba8401c06fc033b64cfa30dbf
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Id: g=c511af19db7eac5e7bbf9fdc0c828fc5
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../Active"
+      - Name: ns=3;Pairs
+        Id: g=1baf25332021c14f30738c37f48b865d
+        Type: BaseObjectType
+        Children:
+        - Name: Pair
+          Id: g=844a1faaf0438e93089d79aea46d2398
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Id: g=063fc98afb4382288ae609473f9cd0ea
+            Type: BaseDataVariableType
+            DataType: Boolean
+          - Name: Value
+            Id: g=186550a8052779578db3c9f678fd118c
+            Type: BaseDataVariableType
+            DataType: UInt16
+        - Name: Pair1
+          Id: g=752f6bbedf31b5d2fd63334f31d36893
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Id: g=78b32e6cf00ae6d461b59fa07c9a4e75
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+          - Name: Value
+            Id: g=9219d1c6b57ba794fd3f621a4cb8dc3f
+            Type: BaseDataVariableType
+            DataType: UInt16
+            Value: 1
+  - Name: Active
+    Id: g=8c2e123f0f62163570a91d9365fb41ba
+    Type: BaseDataVariableType
+    DataType: Boolean
+    AccessLevel: Read
+  - Name: AutoAcknowledge
+    Id: g=ebef059463ea0314fd4c856fe4812d6b
+    Type: BaseDataVariableType
+    DataType: Boolean
+- Name: Current Alarm
+  Id: g=ee745f7fb2046d8129c3f1d3a679ddb5
+  Type: ExclusiveLevelAlarmController
+  Children:
+  - Name: InputValue
+    Id: g=9ff1e3ec9b56c3e1ae0d6af57242c2f6
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=4f340c957f18b383c7e460cf016d7981
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../Model/DB/Device/DataRT/I1"
+      Children:
+      - Name: Mode
+        Id: g=b3088d422a5941e0888010582a2686e2
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Id: g=0f793cc2d396dcda23cd0e4f7a77b90e
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=21;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=154
+    Direction: Forward
+  - Name: HighLimit
+    Id: g=2da2bea87ce594b03c1e28f05e21b083
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 20.0
+  - Name: LowLimit
+    Id: g=04cafd83087538ddc86581aa435d7b8f
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 2.0
+  - Name: Message
+    Id: g=569246afdc6ed280bc7e4cfd3ef06f69
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Children:
+    - Name: HighStateMessage
+      Id: g=11ea33f57c3b8df25296a11507fbeeaf
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"LocaleId":"en-US","Text":""}
+      Children:
+      - Name: StringFormatter1
+        Id: g=cc82dd00ffc8ff8f1a836fd4f5fb2751
+        Type: StringFormatter
+        Children:
+        - Name: Format
+          Id: g=4e9c6a959f9f93894d71e66e3d8fe2f9
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ReferenceType: HasParameter
+          Value: {"LocaleId":"en-US","Text":"Current {0}'s HIGH"}
+        - Name: ns=3;Source0
+          Id: g=d4ee0490653dcd73e1c8f826e0711f0b
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=96cd2ea36bfbd3a03a7b50d7c51b9990
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../../Model/DB/Device/DataRT/device"
+            Children:
+            - Name: IsPull
+              Id: g=0580c3f9d89828ed45219b175ab3dd90
+              Type: BaseVariableType
+              DataType: Boolean
+              Value: true
+        - Name: IsPull
+          Id: g=f4f5463039925568ec9ffc254aa12d75
+          Type: PropertyType
+          DataType: Boolean
+          ReferenceType: HasComponent
+          Value: true
+    - Name: LowStateMessage
+      Id: g=25a8689276e215f1cbab3edc9ab9496b
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Children:
+      - Name: StringFormatter1
+        Id: g=f4db8eccbbe115a1c0584dcc1c9ec7af
+        Type: StringFormatter
+        Children:
+        - Name: Format
+          Id: g=08ae5e97dc4ec9352343982a70d0ee6e
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ReferenceType: HasParameter
+          Value: {"LocaleId":"en-US","Text":"Current {0}'s LOW"}
+        - Name: ns=3;Source0
+          Id: g=17e7b3c03551f76f88f8896a5e733e0e
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=bab20712c8a68c9fea01a29d2699f83e
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../../Model/DB/Device/DataRT/device"
+            Children:
+            - Name: IsPull
+              Id: g=2efee74821ac02e5c8c82fa85f236dfa
+              Type: BaseVariableType
+              DataType: Boolean
+              Value: true
+        - Name: IsPull
+          Id: g=9bf0a4ac21f9df2da65ad32467c3070a
+          Type: PropertyType
+          DataType: Boolean
+          ReferenceType: HasComponent
+          Value: true
+  - Name: State
+    Id: g=d3eac021d0e18f6aa6c4ee4306f2034b
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Children:
+    - Name: KeyValueConverter1
+      Id: g=e4ae7b9d66567e3d9374a8d90020ec7a
+      Type: ValueMapConverter
+      Children:
+      - Name: Source
+        Id: g=c31100f69ac08bbbba9c5a53bd359355
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Id: g=0f4afef167d650450f4bdf62a27d5acf
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../Active"
+      - Name: ns=3;Pairs
+        Id: g=887ae7b0778730f1b456cc9c4d04cb94
+        Type: BaseObjectType
+        Children:
+        - Name: Pair
+          Id: g=b31f642a5f88372a630883a2d07b9b6e
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Id: g=aa6eb5c6f4230dfe6abfcac2a1a84584
+            Type: BaseDataVariableType
+            DataType: Boolean
+          - Name: Value
+            Id: g=8fc36f9f0beecb6df6cf605de28bf188
+            Type: BaseDataVariableType
+            DataType: UInt16
+        - Name: Pair1
+          Id: g=7151b24d4536cce3983a721cd90f9adf
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Id: g=fca740f033a738325c37e49bbbd732fd
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+          - Name: Value
+            Id: g=7d96d2fd3cc95c7f22b6a7628dbfd495
+            Type: BaseDataVariableType
+            DataType: UInt16
+            Value: 1
+  - Name: Active
+    Id: g=76c3b6b24ce7414abb24352bdb72ae48
+    Type: BaseDataVariableType
+    DataType: Boolean
+    AccessLevel: Read
+  - Name: AutoAcknowledge
+    Id: g=6bc86a8adf8256865b3675c8d677e52d
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: Enabled
+    Id: g=63e26a7810de7c20a3fd5787780ba282
+    Type: BaseDataVariableType
+    DataType: Boolean
+- Name: Power Alarm
+  Id: g=c119f780b1725b849bae34603503644a
+  Type: ExclusiveLevelAlarmController
+  Children:
+  - Name: InputValue
+    Id: g=f1df66135b8a398d23683a10a4a47c32
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=bfab6ecb7653b90f34b330646c43f700
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../Model/DB/Device/DataRT/P_total"
+      Children:
+      - Name: Mode
+        Id: g=e2658b3f01e2a1bc0b275e2076b0b107
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Id: g=28e778748062322f7b7e8020359e2c6d
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=21;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=154
+    Direction: Forward
+  - Name: LowLimit
+    Id: g=e19121ce5250e3e15c0f8c539d57b6ed
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 880.0
+  - Name: HighLimit
+    Id: g=1b0760e480098206caf340d8f1cb7719
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 3300.0
+  - Name: Message
+    Id: g=e31b4f74416038c7dfc586aa7ad5ba4c
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Children:
+    - Name: HighStateMessage
+      Id: g=92fdc2c74fa0520208369337282243a6
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Children:
+      - Name: StringFormatter1
+        Id: g=12968c99e14b4f534c2ebc26b11bfafd
+        Type: StringFormatter
+        Children:
+        - Name: Format
+          Id: g=f32b7f620e2fc19ac8615a3652a3bc53
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ReferenceType: HasParameter
+          Value: {"LocaleId":"en-US","Text":"Power {0}'s HIGH"}
+        - Name: ns=3;Source0
+          Id: g=f1e24b52b2534ae1e2786c984552d182
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=d479132b07150a2952d05fa28a1d059d
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../../Model/DB/Device/DataRT/device"
+            Children:
+            - Name: IsPull
+              Id: g=d8d693dd015e7df1a6bf42df8846a20b
+              Type: BaseVariableType
+              DataType: Boolean
+              Value: true
+        - Name: IsPull
+          Id: g=2cbbf8b6ca8385dbe6d43885c4b6382a
+          Type: PropertyType
+          DataType: Boolean
+          ReferenceType: HasComponent
+          Value: true
+    - Name: LowStateMessage
+      Id: g=1e6b7e6917fe4b2cd9591b794115d12a
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Children:
+      - Name: StringFormatter1
+        Id: g=ccb2c06cff5fdeddb97d7d9e340015f4
+        Type: StringFormatter
+        Children:
+        - Name: Format
+          Id: g=89e5567c7b9acf8da934789e78d78a82
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ReferenceType: HasParameter
+          Value: {"LocaleId":"en-US","Text":"Power {0}'s LOW"}
+        - Name: ns=3;Source0
+          Id: g=459bab099aee3d66b5c399479ca10064
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=539bf68f1325287482e54f03dd9b41e1
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../../Model/DB/Device/DataRT/device"
+            Children:
+            - Name: IsPull
+              Id: g=006455957508a74ad2e0b9c24e28d953
+              Type: BaseVariableType
+              DataType: Boolean
+              Value: true
+        - Name: IsPull
+          Id: g=f0d7b79e687de23ce1997e645cc2fdfd
+          Type: PropertyType
+          DataType: Boolean
+          ReferenceType: HasComponent
+          Value: true
+  - Name: State
+    Id: g=4f86aa39b2c9ece6419658a31904b81c
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Children:
+    - Name: KeyValueConverter1
+      Id: g=d7fc94924c21e899f8abe81e4918a8fa
+      Type: ValueMapConverter
+      Children:
+      - Name: Source
+        Id: g=58296d15612cc941f1c8fb200232c381
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Id: g=cab2b0226d92f8fcfb90c6e12cbb5a1c
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../Active"
+      - Name: ns=3;Pairs
+        Id: g=70638c8081ef29d7eccfb5ed03a27ffe
+        Type: BaseObjectType
+        Children:
+        - Name: Pair
+          Id: g=38067ee842df49b505d3c80fd4ea8b58
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Id: g=9ade0bdd047c09701ce9c0a3dc977533
+            Type: BaseDataVariableType
+            DataType: Boolean
+          - Name: Value
+            Id: g=ff328f3c227ab8045b2d5422d35da959
+            Type: BaseDataVariableType
+            DataType: UInt16
+        - Name: Pair1
+          Id: g=746e7487883c6d7a2ca45724ad34fa4d
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Id: g=d3ab528936b380c396b65da3af00aa52
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+          - Name: Value
+            Id: g=166e4aed04dc9ae0d1e4d93f219ae22f
+            Type: BaseDataVariableType
+            DataType: UInt16
+            Value: 1
+  - Name: Active
+    Id: g=25348a3d5aae2dda27f1031f53e2097e
+    Type: BaseDataVariableType
+    DataType: Boolean
+    AccessLevel: Read
+  - Name: AutoAcknowledge
+    Id: g=bc4a38ec94d637269be1e5ff007eea73
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: Enabled
+    Id: g=fc92d31e8d497f341833a5e61606ffb8
+    Type: BaseDataVariableType
+    DataType: Boolean
+- Name: Frequency Alarm
+  Id: g=6c3b160b022bf7269688c9f44a0f1cb8
+  Type: ExclusiveLevelAlarmController
+  Children:
+  - Name: InputValue
+    Id: g=a486de359b689aff5236180ecf424595
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=82b442ece97a83757e000f3726379fb4
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../Model/DB/Device/DataRT/F"
+      Children:
+      - Name: Mode
+        Id: g=254f5c839b27d42e38eeaf19eb56e1be
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Id: g=fee664b15e39f89b90ea9952e58b2c39
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=21;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=154
+    Direction: Forward
+  - Name: HighLimit
+    Id: g=e9b7f831bd00358ccd8975e31de25491
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 60.0
+  - Name: LowLimit
+    Id: g=0794c745efe7c726d6482f50c01deb2d
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 40.0
+  - Name: Message
+    Id: g=9964e11c090f30e395182197ed38a0e8
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Children:
+    - Name: HighStateMessage
+      Id: g=6654eef2e08427b05af8d99950f5a2f4
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Children:
+      - Name: StringFormatter1
+        Id: g=8c38cb2b47cea87b61ac28a2bb97ee23
+        Type: StringFormatter
+        Children:
+        - Name: Format
+          Id: g=e0f855a583dab04f9a605ddd9abe35e3
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ReferenceType: HasParameter
+          Value: {"LocaleId":"en-US","Text":"Frequency {0}'s HIGH"}
+        - Name: ns=3;Source0
+          Id: g=f71747e8b835d8a52bf61f7ff107476a
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=a5d5c4ff84f3fedfd4487602654d8507
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../../Model/DB/Device/DataRT/device"
+            Children:
+            - Name: IsPull
+              Id: g=4f50c8e88f7ddd97e6b5d00c7681322d
+              Type: BaseVariableType
+              DataType: Boolean
+              Value: true
+        - Name: IsPull
+          Id: g=45458784c832f688d6430c55a6920508
+          Type: PropertyType
+          DataType: Boolean
+          ReferenceType: HasComponent
+          Value: true
+    - Name: LowStateMessage
+      Id: g=1645640026b13068c2e9f212634e4d62
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Children:
+      - Name: StringFormatter1
+        Id: g=f9ba1246c94162073bd4bff55c78efdb
+        Type: StringFormatter
+        Children:
+        - Name: Format
+          Id: g=6a50a4189d311ea5efcac519decab8f5
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ReferenceType: HasParameter
+          Value: {"LocaleId":"en-US","Text":"Frequency {0}'s LOW"}
+        - Name: ns=3;Source0
+          Id: g=92e60dedcb969b5ac349a2a67836cd02
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=be87620c973e9121b99b7e64a4c59c94
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../../Model/DB/Device/DataRT/device"
+            Children:
+            - Name: IsPull
+              Id: g=b1697cedba287b15c5849c44af078496
+              Type: BaseVariableType
+              DataType: Boolean
+              Value: true
+        - Name: IsPull
+          Id: g=8c8d8ae994bfc08104d464ed8946f63d
+          Type: PropertyType
+          DataType: Boolean
+          ReferenceType: HasComponent
+          Value: true
+  - Name: State
+    Id: g=7a3290c88cc93635b6e9ce1f5074a9d1
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Children:
+    - Name: KeyValueConverter1
+      Id: g=133eb7a1a1920bf21547f8d78e164a38
+      Type: ValueMapConverter
+      Children:
+      - Name: Source
+        Id: g=7a809ff4755b2fbe0e38d16b09eeb0e0
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Id: g=e3cb6dacde8204b866568272fcbedff7
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../Active"
+      - Name: ns=3;Pairs
+        Id: g=d0f381c2e1d1bd5cd9f7edf4231a1e67
+        Type: BaseObjectType
+        Children:
+        - Name: Pair
+          Id: g=618976e39fa974e9a1abc688cec84d73
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Id: g=458934614f6bcabdefb6ba7aa958b872
+            Type: BaseDataVariableType
+            DataType: Boolean
+          - Name: Value
+            Id: g=ba2aa2dddc3c4660abc859274841a883
+            Type: BaseDataVariableType
+            DataType: UInt16
+        - Name: Pair1
+          Id: g=e4c463f22a8809543e585c16ac9ba503
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Id: g=d5f2d13b6b953675b539f1e8e4a951c4
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+          - Name: Value
+            Id: g=3c7597cad46fea78fa86b9ee6582d653
+            Type: BaseDataVariableType
+            DataType: UInt16
+            Value: 1
+  - Name: Active
+    Id: g=2a848d077204cc23bb06c7f1c6b98697
+    Type: BaseDataVariableType
+    DataType: Boolean
+    AccessLevel: Read
+  - Name: AutoConfirm
+    Id: g=11f3fee2461f5fe99710a36535d8b2bd
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: AutoAcknowledge
+    Id: g=cd2927b9572ddd63c434704228c3cd84
+    Type: BaseDataVariableType
+    DataType: Boolean
+- Name: Connect Alarm
+  Id: g=9280181c81a8eb4f29be0a6e2b0b0ec0
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=22db31562cfd613b52858ce082b026bd
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 1.0
+  - Name: InputValue
+    Id: g=457dff1558efd0032efb902a62ae0772
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=7c6a9b01e889672336160fdaf2fed2ee
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../Model/DB/Device/Status"
+      Children:
+      - Name: Mode
+        Id: g=2ab98dbbc77ebb6ebf90dae1327a9024
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Id: g=e8aeeec6643dbb1e4ccc32bbd398972c
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=21;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=21;i=154
+    Direction: Forward
+  - Name: Message
+    Id: g=59d66d40395fe6b6cc4928dffa27eb0d
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":""}
+    Children:
+    - Name: StringFormatter1
+      Id: g=ba413abf3c51a2222e98a7d2c0f86f22
+      Type: StringFormatter
+      Children:
+      - Name: Format
+        Id: g=24c17a41e8ba19164d6ad3fe1d235edf
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ReferenceType: HasParameter
+        Value: {"LocaleId":"en-US","Text":"Device {0}'s disconnect!"}
+      - Name: ns=3;Source0
+        Id: g=12a80fe468525ada21a887bfe1da7ae9
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Id: g=5d22c6cff1992b2f12cdb5aa4bb61a38
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../../../Model/DB/Device/DataRT/device_id"
+          Children:
+          - Name: IsPull
+            Id: g=d1d3179b271451236f80f83bd4961ec9
+            Type: BaseVariableType
+            DataType: Boolean
+            Value: true
+      - Name: IsPull
+        Id: g=3d1874b2e9f208ef13b3ab5c5774a7f3
+        Type: PropertyType
+        DataType: Boolean
+        ReferenceType: HasComponent
+        Value: true
+  - Name: Severity
+    Id: g=54fd0c068f2af693c0edadfbfc3eb7dc
+    Type: BaseDataVariableType
+    DataType: UInt16
+  - Name: State
+    Id: g=bf6bff9959b108e1649fdce15965cc86
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Children:
+    - Name: KeyValueConverter1
+      Id: g=0815b5136dd65ad2b8de3d1635cf8024
+      Type: ValueMapConverter
+      Children:
+      - Name: Source
+        Id: g=7db25e64e0dca9251dbaddfa74447a48
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Id: g=7c5c6aeadfa54b433a6735ffd85eb7bc
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../Active"
+      - Name: ns=3;Pairs
+        Id: g=893a8c3efee1178b5e9eee7da51efe84
+        Type: BaseObjectType
+        Children:
+        - Name: Pair
+          Id: g=dbf398e87c4c70b755e86eea74df61f7
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Id: g=3502ef44f151e74e24fb57035379bd3b
+            Type: BaseDataVariableType
+            DataType: Boolean
+          - Name: Value
+            Id: g=441dc07e56e843ae8f4aff1ee058c2da
+            Type: BaseDataVariableType
+            DataType: UInt16
+        - Name: Pair1
+          Id: g=227a15496145278a67f1fc745d236935
+          Type: ValueMapPair
+          Children:
+          - Name: Key
+            Id: g=d9e7175762f38523330ced95c7488e5e
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+          - Name: Value
+            Id: g=6e0df461865bda660eac0319c60c9bd6
+            Type: BaseDataVariableType
+            DataType: UInt16
+            Value: 1
+  - Name: Active
+    Id: g=edeb865e080c7fe201a098dad9867cb5
+    Type: BaseDataVariableType
+    DataType: Boolean
+    AccessLevel: Read
+  - Name: AutoAcknowledge
+    Id: g=bc2dee998f950877fe69f4a0f7c9f537
+    Type: BaseDataVariableType
+    DataType: Boolean

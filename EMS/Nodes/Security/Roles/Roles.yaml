@@ -1,0 +1,13 @@
+Name: Roles
+Id: g=168315c4ba704e70bb13e35de715eb03
+Type: RolesCategoryFolder
+Children:
+- Name: View Only
+  Id: g=1a0b850d6c7e3c37b3dc9879bddf6b9a
+  Type: ns=1;RoleType
+- Name: Can Confirmed
+  Id: g=b63317ec635fad23080645398899ad27
+  Type: ns=1;RoleType
+- Name: Repairable
+  Id: g=10ab61b939e25aa1f29d02495e8f9628
+  Type: ns=1;RoleType

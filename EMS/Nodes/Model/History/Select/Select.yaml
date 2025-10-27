@@ -1,0 +1,15 @@
+Name: Select
+Type: FolderType
+Children:
+- Name: FromTime
+  Type: BaseDataVariableType
+  DataType: String
+- Name: ToTime
+  Type: BaseDataVariableType
+  DataType: String
+- File: Energy/Energy.yaml
+- File: Device/Device.yaml
+- File: Mode/Mode.yaml
+- Name: Variable1
+  Type: BaseDataVariableType
+  DataType: Int32

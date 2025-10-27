@@ -1,0 +1,34 @@
+Name: Groups
+Id: g=33ac98afcbbcd645bc8146197074cc43
+Type: GroupsCategoryFolder
+Children:
+- Name: TeamOperator
+  Id: g=a8597bc0849f0304167104dc98f6d2c2
+  Type: GroupType
+  Children:
+  - Class: Reference
+    Type: HasRole
+    Target: g=b63317ec635fad23080645398899ad27
+  - Class: Reference
+    Type: HasRole
+    Target: g=1a0b850d6c7e3c37b3dc9879bddf6b9a
+- Name: TeamMaintenance
+  Id: g=f117cd029156d7b30f74b9b3f2c59d22
+  Type: GroupType
+  Children:
+  - Class: Reference
+    Type: HasRole
+    Target: g=b63317ec635fad23080645398899ad27
+  - Class: Reference
+    Type: HasRole
+    Target: g=10ab61b939e25aa1f29d02495e8f9628
+  - Class: Reference
+    Type: HasRole
+    Target: g=1a0b850d6c7e3c37b3dc9879bddf6b9a
+- Name: Guest
+  Id: g=473689b89654cacad1716ffbd511250c
+  Type: GroupType
+  Children:
+  - Class: Reference
+    Type: HasRole
+    Target: g=1a0b850d6c7e3c37b3dc9879bddf6b9a

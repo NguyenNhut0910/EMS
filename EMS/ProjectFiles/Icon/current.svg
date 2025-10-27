@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg baseProfile="full"
+     height="200"
+     version="1.1"
+     viewBox="0,0,200,200"
+     width="200"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:ev="http://www.w3.org/2001/xml-events"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs />
+    <circle cx="100"
+            cy="100"
+            fill="none"
+            r="60"
+            stroke="currentColor"
+            stroke-width="6"/>
+    <line stroke="currentColor"
+          stroke-width="6"
+          x1="-10"
+          x2="40"
+          y1="100"
+          y2="100"/>
+    <line stroke="currentColor"
+          stroke-width="6"
+          x1="160"
+          x2="210"
+          y1="100"
+          y2="100"/>
+    <text fill="currentColor"
+          font-family="Arial"
+          font-size="36px"
+          text-anchor="middle"
+          x="100"
+          y="112">
+        A
+    </text>
+</svg>

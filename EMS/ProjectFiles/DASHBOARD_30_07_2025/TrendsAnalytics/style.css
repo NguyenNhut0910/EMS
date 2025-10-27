@@ -1,0 +1,68 @@
+body {
+  font-family: "Quicksand", Arial, sans-serif;
+  background-color: transparent;
+  margin: 0;
+  background-color: #f0f0f04d;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f0f0f04d;
+  border-radius: 10px;
+}
+
+#charts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 biểu đồ mỗi hàng */
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.chart-box {
+  background-color: #f0f0f000;
+  border-radius: 8px;
+  box-shadow: none;
+  transition: transform 0.3s ease;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* 
+  @media (max-width: 768px) {
+    #charts {
+      grid-template-columns: 1fr;
+    }
+    .container {
+      padding: 15px;
+    }
+  } */
+.chart-box canvas {
+  background-color: transparent !important;
+}
+.scroll-container {
+  overflow-x: hidden !important;
+  overflow-y: auto;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+}
+
+/* Chrome, Edge, Safari */
+.scroll-container::-webkit-scrollbar {
+  width: 6px; /* Độ rộng thanh cuộn */
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: transparent; /* Track trong suốt */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1); /* Màu thanh kéo */
+  border-radius: 10px;
+  border: 1px solid transparent;
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.2); /* Hover sáng hơn */
+}

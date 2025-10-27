@@ -1,0 +1,91 @@
+Name: Gauge
+Type: FolderType
+Children:
+- Name: gauge1
+  Type: BaseDataVariableType
+  DataType: Float
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../DB/Device/DataRT/U1"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: gauge2
+  Type: BaseDataVariableType
+  DataType: Float
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../DB/Device/DataRT/I1"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: gauge3
+  Type: BaseDataVariableType
+  DataType: Float
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../DB/Device/DataRT/P_total"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: gauge4
+  Type: BaseDataVariableType
+  DataType: Float
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../DB/Device/DataRT/F"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: gauge5
+  Type: BaseDataVariableType
+  DataType: Float
+- Name: gauge6
+  Type: BaseDataVariableType
+  DataType: Float
+- Name: gauge7
+  Type: BaseDataVariableType
+  DataType: Float
+- Name: gauge8
+  Type: BaseDataVariableType
+  DataType: Float
+- Name: gauge9
+  Type: BaseDataVariableType
+  DataType: Float
+- Name: gauge10
+  Type: BaseDataVariableType
+  DataType: Float
+- Name: gauge11
+  Type: BaseDataVariableType
+  DataType: Float
+- Name: gauge12
+  Type: BaseDataVariableType
+  DataType: Float
+- Name: gauge13
+  Type: BaseDataVariableType
+  DataType: Float
+- Name: gauge14
+  Type: BaseDataVariableType
+  DataType: Float
+- Name: gauge15
+  Type: BaseDataVariableType
+  DataType: Float
+- Name: gauge16
+  Type: BaseDataVariableType
+  DataType: Float

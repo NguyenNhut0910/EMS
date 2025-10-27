@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Energy Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./chart.js"></script>
+  </head>
+  <body>
+    <!-- Bộ lọc -->
+    <div class="controls">
+      <div>
+        <label><b>Device:</b></label>
+        <select id="deviceSelect" multiple></select>
+      </div>
+
+      <div>
+        <label><b>Energy:</b></label>
+        <select id="energySelect" multiple>
+          <option value="voltage">Voltage (V)</option>
+          <option value="current">Current (A)</option>
+          <option value="power">Power (W)</option>
+          <option value="frequency">Frequency (Hz)</option>
+        </select>
+      </div>
+
+      <div>
+        <label><b>From:</b></label>
+        <input type="datetime-local" id="startTime" />
+      </div>
+      <div>
+        <label><b>To:</b></label>
+        <input type="datetime-local" id="endTime" />
+      </div>
+
+      <div>
+        <label><b>Display mode:</b></label>
+        <select id="modeSelect">
+          <option value="hour">Hour</option>
+          <option value="day">Day</option>
+          <option value="week">Week</option>
+          <option value="month" selected>Month</option>
+        </select>
+      </div>
+
+      <button id="filterBtn">Filter data</button>
+    </div>
+
+    <div id="notice"></div>
+
+    <!-- Biểu đồ -->
+    <div class="chart-container">
+      <div class="chart-box" id="barChartBox">
+        <canvas id="barChart"></canvas>
+      </div>
+      <div class="chart-box" id="doughnutChartBox">
+        <canvas id="doughnutChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Bảng dữ liệu -->
+    <table id="dataTable">
+      <thead>
+        <tr id="tableHeader">
+          <th>Device</th>
+          <th>Timestamp</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script src="./echarts.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

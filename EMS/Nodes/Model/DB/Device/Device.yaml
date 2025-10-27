@@ -1,0 +1,38 @@
+Name: Device
+Type: FolderType
+Children:
+- File: DataRT/DataRT.yaml
+- Name: Status
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Value: true
+- Name: CheckStatus
+  Type: NetLogic
+  Children:
+  - Name: timestamp
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../DataRT/timestamp"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: Status
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../Status"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2

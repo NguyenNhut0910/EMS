@@ -1,0 +1,124 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Bản đồ VN chính chủ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"/>
+  <style>html,body,#map{height:100%;margin:0;padding:0;}</style>
+</head>
+<body>
+  <div id="map"></div>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script>
+    const center = [15.9, 108]; // Trung tâm VN
+    const map = L.map('map').setView(center, 6);
+    L.tileLayer('https://tiles.mattech.vn/styles/basic/{z}/{x}/{y}.png', {
+      attribution: '&copy; OSM & MapTiler VN',
+      maxZoom: 18
+    }).addTo(map);
+  </script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Bản đồ VN chính chủ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <style>
+    html, body, #map { height: 100%; margin: 0; padding: 0; }
+    .popup-custom {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+    .popup-custom b {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="map"></div>
+
+  <script>
+    // ====== Leaflet map setup ======
+    const map = L.map('map').setView([15.9, 108], 6);
+
+    L.tileLayer('https://tiles.mattech.vn/styles/basic/{z}/{x}/{y}.png', {
+      maxZoom: 18
+    }).addTo(map);
+
+    // Bình Dương
+    const binhDuongMarker = L.marker([10.9804, 106.6519], {
+      icon: L.icon({
+        iconUrl: 'https://maps.google.com/mapfiles/ms/icons/orange-dot.png',
+        iconSize: [32, 32],
+        iconAnchor: [16, 32],
+        popupAnchor: [0, -32]
+      })
+    }).addTo(map);
+
+    binhDuongMarker.bindPopup(`
+      <div class="popup-custom">
+        <b>🏭 Bình Dương</b><br>
+        Công suất: <b>120 kW</b><br>
+        Trạng thái: <b>Cảnh báo</b>
+      </div>
+    `);
+
+    // Bắc Ninh
+    const bacNinhMarker = L.marker([21.1820, 106.0511], {
+      icon: L.icon({
+        iconUrl: 'https://maps.google.com/mapfiles/ms/icons/green-dot.png',
+        iconSize: [32, 32],
+        iconAnchor: [16, 32],
+        popupAnchor: [0, -32]
+      })
+    }).addTo(map);
+
+    bacNinhMarker.bindPopup(`
+      <div class="popup-custom">
+        <b>🏭 Bắc Ninh</b><br>
+        Công suất: <b>90 kW</b><br>
+        Trạng thái: <b>Bình thường</b>
+      </div>
+    `);
+  </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Bản đồ VN Offline - Ghim zoom động</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="leaflet.css" />
+  <script src="leaflet.js"></script>
+  <style>
+    html, body, #map { height: 100%; margin: 0; padding: 0; }
+
+    .popup-custom {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    .zoom-icon {
+      font-size: 24px;
+      line-height: 1;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <script src="map.js"></script>
+</body>
+</html>
+
+
+
+

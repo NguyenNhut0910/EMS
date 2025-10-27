@@ -1,0 +1,15 @@
+Name: Device
+Type: FolderType
+Children:
+- Name: DeviceSelected1
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: DeviceSelected2
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: DeviceSelected3
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: DeviceSelected4
+  Type: BaseDataVariableType
+  DataType: Boolean

@@ -1,0 +1,17 @@
+Name: Button_fill
+Type: FolderType
+Children:
+- Name: data_type
+  Id: g=368a3a8d52756efb57de32b5a964a983
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: time
+  Id: g=e4d8ae313f3c9244dbf2016be2c387ab
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: Device
+  Type: BaseDataVariableType
+  DataType: Int32
+- Name: check_time
+  Type: BaseDataVariableType
+  DataType: Int32

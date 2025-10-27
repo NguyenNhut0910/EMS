@@ -1,0 +1,76 @@
+Name: MQTT
+Type: MQTTCategoryFolder
+Children:
+- Name: MQTTClient1
+  Type: MQTTClient
+  Children:
+  - Name: BrokerAddress
+    Type: PropertyType
+    DataType: String
+    Value: "nhatvietindustry.ddns.net"
+  - Name: BrokerPort
+    Type: PropertyType
+    DataType: UInt16
+    Value: 7683
+  - Name: ClientId
+    Type: PropertyType
+    DataType: String
+    Value: "FTOptix-Pi"
+  - Name: Status
+    Type: BaseDataVariableType
+    DataType: StatusEnum
+    ReferenceType: HasProperty
+    AccessLevel: Read
+  - Name: UserIdentityType
+    Type: BaseDataVariableType
+    DataType: UserIdentityTypeEnum
+    Value: 1
+  - Name: SSLTLSEnabled
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: ValidateBrokerCertificate
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Class: Reference
+    Target: ns=13;i=12
+    Direction: Forward
+  - Class: Reference
+    Target: ns=13;i=44
+    Direction: Forward
+  - Name: MQTTSubscriber1
+    Type: MQTTSubscriber
+    Children:
+    - Name: Subscriptions
+      Type: BaseObjectType
+      Children:
+      - Name: DefaultJSONSubscription1
+        Type: Subscription
+        ReferenceType: HasOrderedComponent
+        Children:
+        - Name: Folder
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/EMS/Model/DB/Device/DataRT"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType/FolderType"
+        - Name: Topic
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "ftoptix"
+        - Name: QoS
+          Type: BaseDataVariableType
+          DataType: QoSLevelEnum
+    - Class: Reference
+      Target: ns=13;i=47
+      Direction: Forward
+  - Name: Username
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "ftoptix"
+  - Name: Password
+    Type: BaseDataVariableType
+    DataType: Password
+    Value: "raspberry"

@@ -1,0 +1,36 @@
+Name: Session
+Type: FolderType
+Children:
+- Name: Name
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "0"
+- Name: SessionID
+  Type: BaseDataVariableType
+  DataType: IdType
+- Name: OperationID
+  Type: BaseDataVariableType
+  DataType: Int32
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../Operator /OperatorID"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: ProductID
+  Type: BaseDataVariableType
+  DataType: Int32
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../Product/ProductID"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2

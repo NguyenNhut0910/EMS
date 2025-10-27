@@ -1,0 +1,86 @@
+Name: Users
+Id: g=8cdfe95c558e909385d4fe7ddc9a2655
+Type: UsersCategoryFolder
+Children:
+- Name: Thien
+  Id: g=f00f6acb324ced0c419cb07407c23994
+  Type: UserType
+  Children:
+  - Name: LocaleId
+    Id: g=7eb33c6a36a9771f5e8ed027c39086fc
+    Type: BaseVariableType
+    DataType: LocaleId
+    ReferenceType: HasProperty
+    Value: "en-US"
+  - Name: Language
+    Id: g=9e0d6dd959ab7960cfcd69d324d84cc3
+    Type: BaseVariableType
+    DataType: LocaleId
+    ReferenceType: HasProperty
+    Value: "en-US"
+  - Name: MeasurementSystem
+    Id: g=dc8dec756aee18ff9476c1965ca1f74d
+    Type: BaseVariableType
+    DataType: MeasurementSystem
+    ReferenceType: HasProperty
+    Value: 1
+  - Class: Reference
+    Type: HasGroup
+    Target: g=a8597bc0849f0304167104dc98f6d2c2
+- Name: Nhut
+  Id: g=a910f038faeef6456b600db8c6632204
+  Type: UserType
+  Children:
+  - Name: LocaleId
+    Id: g=9aafb00817ea836e18dcc0b5f9e2c541
+    Type: BaseVariableType
+    DataType: LocaleId
+    ReferenceType: HasProperty
+    Value: "en-US"
+  - Name: Language
+    Id: g=f4c1e04abc581f22a1989f7b06aae020
+    Type: BaseVariableType
+    DataType: LocaleId
+    ReferenceType: HasProperty
+    Value: "en-US"
+  - Name: MeasurementSystem
+    Id: g=385b1c1745ebd76c5648830fa5c8729e
+    Type: BaseVariableType
+    DataType: MeasurementSystem
+    ReferenceType: HasProperty
+    Value: 1
+  - Class: Reference
+    Type: HasGroup
+    Target: g=a8597bc0849f0304167104dc98f6d2c2
+- Name: Truc
+  Id: g=39a270aed6a85cd4b0a6eeac08981af7
+  Type: UserType
+  Children:
+  - Name: LocaleId
+    Id: g=f9e3000c5f23706dc17a8393958c95ea
+    Type: BaseVariableType
+    DataType: LocaleId
+    ReferenceType: HasProperty
+    Value: "en-US"
+  - Name: Language
+    Id: g=6482dfd6010382e92d844c35c79c0190
+    Type: BaseVariableType
+    DataType: LocaleId
+    ReferenceType: HasProperty
+    Value: "en-US"
+  - Name: MeasurementSystem
+    Id: g=5d7cb1c27019cb1b47e66a75b48fff7f
+    Type: BaseVariableType
+    DataType: MeasurementSystem
+    ReferenceType: HasProperty
+    Value: 1
+  - Class: Reference
+    Type: HasGroup
+    Target: g=f117cd029156d7b30f74b9b3f2c59d22
+- Name: Guest
+  Id: g=648458cd7241cc3ce4044198c31eb012
+  Type: UserType
+  Children:
+  - Class: Reference
+    Type: HasGroup
+    Target: g=473689b89654cacad1716ffbd511250c

@@ -1,0 +1,19 @@
+Name: Mode
+Type: FolderType
+Children:
+- Name: Hour
+  Id: g=b1e88682a4ab382bb046302083cfcca8
+  Type: BaseDataVariableType
+  DataType: Int16
+- Name: Day
+  Id: g=db94d132f64eed2ab30a9dc30fc5f2b7
+  Type: BaseDataVariableType
+  DataType: Int16
+- Name: Week
+  Id: g=a920e35d7cf27d9fd5f6bc61bd43afc2
+  Type: BaseDataVariableType
+  DataType: Int16
+- Name: Month
+  Id: g=04c4b3a91a17926640f1dd9cd47775a2
+  Type: BaseDataVariableType
+  DataType: Int16

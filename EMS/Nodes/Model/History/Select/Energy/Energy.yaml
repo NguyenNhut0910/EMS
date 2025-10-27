@@ -1,0 +1,15 @@
+Name: Energy
+Type: FolderType
+Children:
+- Name: VoltageSelected
+  Type: BaseDataVariableType
+  DataType: Int16
+- Name: CurrentSelected
+  Type: BaseDataVariableType
+  DataType: Int16
+- Name: PowerSelected
+  Type: BaseDataVariableType
+  DataType: Int16
+- Name: FrequencySelected
+  Type: BaseDataVariableType
+  DataType: Int16

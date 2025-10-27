@@ -1,0 +1,63 @@
+Name: PowerInstances
+Type: FolderType
+Children:
+- Name: Region1
+  Type: PowerData
+  Children:
+  - Name: Voltage
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: Current
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: Power
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: Frequency
+    Type: BaseDataVariableType
+    DataType: Double
+- Name: Region2
+  Type: PowerData
+  Children:
+  - Name: Voltage
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: Current
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: Power
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: Frequency
+    Type: BaseDataVariableType
+    DataType: Double
+- Name: Region3
+  Type: PowerData
+  Children:
+  - Name: Voltage
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: Current
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: Power
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: Frequency
+    Type: BaseDataVariableType
+    DataType: Double
+- Name: Region4
+  Type: PowerData
+  Children:
+  - Name: Voltage
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: Current
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: Power
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: Frequency
+    Type: BaseDataVariableType
+    DataType: Double

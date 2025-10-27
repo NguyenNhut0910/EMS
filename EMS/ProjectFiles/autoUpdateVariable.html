@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Energy Monitor - Data Input</title>
+    <style>
+      :root {
+        --primary-color: #2c7be5;
+        --success-color: #00d97e;
+        --danger-color: #e63757;
+        --light-bg: #f9fafd;
+      }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--light-bg);
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+      }
+      .card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        width: 100%;
+        max-width: 500px;
+        padding: 25px;
+      }
+      h2 {
+        color: var(--primary-color);
+        margin-top: 0;
+        font-weight: 600;
+      }
+      .form-group {
+        margin-bottom: 20px;
+      }
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: #555;
+      }
+      input {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 15px;
+        box-sizing: border-box;
+        transition: border 0.3s;
+      }
+      input:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 3px rgba(44, 123, 229, 0.1);
+      }
+      button {
+        width: 100%;
+        padding: 12px;
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      button:hover {
+        background-color: #1a68d8;
+      }
+      .status {
+        margin-top: 20px;
+        padding: 12px;
+        border-radius: 6px;
+        display: none;
+        font-size: 14px;
+      }
+      .success {
+        background-color: rgba(0, 217, 126, 0.1);
+        color: var(--success-color);
+        display: block;
+      }
+      .error {
+        background-color: rgba(230, 55, 87, 0.1);
+        color: var(--danger-color);
+        display: block;
+      }
+      .current-value {
+        margin-top: 25px;
+        padding: 15px;
+        background-color: rgba(44, 123, 229, 0.05);
+        border-radius: 6px;
+        border-left: 4px solid var(--primary-color);
+      }
+      .current-value strong {
+        display: block;
+        margin-bottom: 5px;
+        color: #444;
+      }
+      #currentValue {
+        font-family: "Courier New", monospace;
+        font-size: 16px;
+        word-break: break-all;
+      }
+      .var-path {
+        font-size: 12px;
+        color: #777;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>Nhập liệu Energy Monitor</h2>
+
+      <div class="form-group">
+        <label for="dataInput">Giá trị mới:</label>
+        <input
+          type="text"
+          id="dataInput"
+          placeholder="Nhập giá trị cần cập nhật..."
+        />
+      </div>
+
+      <button onclick="sendData()">Cập Nhật Biến</button>
+
+      <div id="status" class="status"></div>
+
+      <div class="current-value">
+        <strong>Giá trị hiện tại trong hệ thống:</strong>
+        <div id="currentValue">Đang kết nối...</div>
+        <div class="var-path">TestAppEnergyMonitor/NetLogic/test</div>
+      </div>
+    </div>
+
+    <script>
+      // Khởi tạo khi trang được tải
+      document.addEventListener("DOMContentLoaded", function () {
+        // Lấy giá trị ban đầu
+        updateCurrentValue();
+
+        // Thiết lập theo dõi thay đổi biến
+        try {
+          System.data.watch(
+            "TestAppEnergyMonitor/NetLogic/test",
+            function (newValue) {
+              document.getElementById("currentValue").textContent =
+                newValue !== undefined && newValue !== null
+                  ? newValue.toString()
+                  : "(null)";
+            }
+          );
+        } catch (error) {
+          document.getElementById("currentValue").textContent =
+            "Lỗi kết nối: " + error.message;
+        }
+      });
+
+      function sendData() {
+        const inputValue = document.getElementById("dataInput").value.trim();
+        const statusElement = document.getElementById("status");
+
+        if (!inputValue) {
+          showStatus("Vui lòng nhập giá trị hợp lệ", "error");
+          return;
+        }
+
+        try {
+          // Ghi giá trị vào biến Factory Optix
+          System.data.set("TestAppEnergyMonitor/NetLogic/test", inputValue);
+
+          // Hiển thị thông báo thành công
+          showStatus(
+            `✓ Đã cập nhật giá trị "${inputValue}" thành công`,
+            "success"
+          );
+
+          // Xóa trường nhập liệu
+          document.getElementById("dataInput").value = "";
+        } catch (error) {
+          showStatus(`✗ Lỗi: ${error.message}`, "error");
+          console.error("Lỗi khi cập nhật biến:", error);
+        }
+      }
+
+      function updateCurrentValue() {
+        try {
+          const currentValue = System.data.get(
+            "TestAppEnergyMonitor/NetLogic/test"
+          );
+          document.getElementById("currentValue").textContent =
+            currentValue !== undefined && currentValue !== null
+              ? currentValue.toString()
+              : "(null)";
+        } catch (error) {
+          document.getElementById("currentValue").textContent =
+            "Không thể đọc giá trị: " + error.message;
+        }
+      }
+
+      function showStatus(message, type) {
+        const statusElement = document.getElementById("status");
+        statusElement.textContent = message;
+        statusElement.className = "status " + type;
+
+        // Tự động ẩn thông báo sau 4 giây
+        setTimeout(() => {
+          statusElement.className = "status";
+          statusElement.textContent = "";
+        }, 4000);
+      }
+    </script>
+  </body>
+</html>

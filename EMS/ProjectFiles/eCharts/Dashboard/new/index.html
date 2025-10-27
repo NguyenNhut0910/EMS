@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Modern Gauge Realtime</title>
+    <link rel="stylesheet" href="gauge.css" />
+  </head>
+  <body>
+    <div class="gauge-grid">
+      <div class="gauge-container">
+        <canvas id="gauge1" width="125" height="100"></canvas>
+        <div class="gauge-label" id="gauge1-text"></div>
+      </div>
+      <div class="gauge-container">
+        <canvas id="gauge2" width="125" height="100"></canvas>
+        <div class="gauge-label" id="gauge2-text"></div>
+      </div>
+      <div class="gauge-container">
+        <canvas id="gauge3" width="125" height="100"></canvas>
+        <div class="gauge-label" id="gauge3-text"></div>
+      </div>
+      <div class="gauge-container">
+        <canvas id="gauge4" width="125" height="100"></canvas>
+        <div class="gauge-label" id="gauge4-text"></div>
+      </div>
+    </div>
+    <script src="paho-mqtt-min.js"></script>
+    <script src="gauge.js"></script>
+  </body>
+</html>

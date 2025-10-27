@@ -1,0 +1,35 @@
+Name: Product
+Type: FolderType
+Children:
+- Name: StartTime
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "0"
+- Name: 'SessionID '
+  Type: BaseDataVariableType
+  DataType: Int32
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../Session/SessionID"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: LeadTime
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "0"
+- Name: Name
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "0"
+- Name: EndTime
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "0"
+- Name: ProductID
+  Type: BaseDataVariableType
+  DataType: Int16

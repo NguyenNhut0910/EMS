@@ -1,0 +1,15 @@
+Name: Area
+Type: FolderType
+Children:
+- Name: AreaID
+  Type: BaseDataVariableType
+  DataType: IdType
+  Children:
+  - Name: Variable1
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Hà Nội"
+  - Name: Variable2
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Hồ Chí Minh"

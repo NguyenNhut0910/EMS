@@ -1,0 +1,55 @@
+Name: No. E&W
+Type: FolderType
+Children:
+- Name: No. Error
+  Type: BaseDataVariableType
+  DataType: Int32
+- Name: No. Warn
+  Type: BaseDataVariableType
+  DataType: Int32
+- Name: Date
+  Type: BaseDataVariableType
+  DataType: String
+  ValueRank: OneDimension
+  ArrayDimensions: [15]
+  Value: ["0","0","0","0","0","0","0","0","0","0","0","0","0","0","0"]
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../NetLogic/CreateAlarmCountDB/AlarmDate"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: No. Error1
+  Type: BaseDataVariableType
+  DataType: Int32
+  ValueRank: OneDimension
+  ArrayDimensions: [15]
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../NetLogic/CreateAlarmCountDB/Severity1"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: No. Warn1
+  Type: BaseDataVariableType
+  DataType: Int32
+  ValueRank: OneDimension
+  ArrayDimensions: [15]
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../NetLogic/CreateAlarmCountDB/Severity0"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
